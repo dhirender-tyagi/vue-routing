@@ -1,0 +1,23 @@
+
+<!DOCTYPE html >
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <script src="./temp.js"></script>
+        <div id='app' v-bind:title="div_title">
+            <user-name name="dhirender"/>
+        </div>
+    </body>
+    <script>
+        Vue.component('user-name', {
+            props: ['name'],
+            template: '<p>Hi {{ name }}</p>'
+        })
+        
+        new Vue({
+            el: "#app"
+        })
+    </script>
+</html>
